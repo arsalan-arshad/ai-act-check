@@ -1,0 +1,5 @@
+User-agent: ai-act-check
+Disallow: /
+
+User-agent: *
+Allow: /

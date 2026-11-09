@@ -1,0 +1,823 @@
+{
+  "_comment": "Best-effort, UNVERIFIED vendor fingerprints for chat widgets. Patterns were written from general knowledge of public embed snippets and have NOT been checked against live widgets; vendors change hosts and markup without notice, so expect both missed widgets and false matches. A match shows a chat widget (possibly human-staffed) is likely present, not that it is an AI system. Every pattern is a case-insensitive regular expression source string. Patterns must stay free of nested quantifiers (checked at load).",
+  "vendors": [
+    {
+      "id": "intercom",
+      "name": "Intercom",
+      "scriptPatterns": [
+        "widget\\.intercom\\.io",
+        "js\\.intercomcdn\\.com"
+      ],
+      "iframePatterns": [
+        "intercom\\.io",
+        "intercom-frame"
+      ],
+      "inlinePatterns": [
+        "Intercom\\(\\s*['\"]boot['\"]",
+        "intercomSettings"
+      ],
+      "domPatterns": [
+        "^intercom-(?:lightweight-app|container|frame)",
+        "^intercom-launcher"
+      ]
+    },
+    {
+      "id": "drift",
+      "name": "Drift",
+      "scriptPatterns": [
+        "js\\.driftt\\.com",
+        "drift\\.com/include"
+      ],
+      "iframePatterns": [
+        "driftt\\.com",
+        "drift-frame"
+      ],
+      "inlinePatterns": [
+        "drift\\.load\\(",
+        "driftt"
+      ],
+      "domPatterns": [
+        "^drift-(?:widget|frame)"
+      ]
+    },
+    {
+      "id": "tidio",
+      "name": "Tidio",
+      "scriptPatterns": [
+        "code\\.tidio\\.co",
+        "tidiochat"
+      ],
+      "iframePatterns": [
+        "tidio"
+      ],
+      "inlinePatterns": [
+        "tidioChatApi",
+        "tidioIdentify"
+      ],
+      "domPatterns": [
+        "^tidio-chat"
+      ]
+    },
+    {
+      "id": "crisp",
+      "name": "Crisp",
+      "scriptPatterns": [
+        "client\\.crisp\\.chat"
+      ],
+      "iframePatterns": [
+        "crisp\\.chat"
+      ],
+      "inlinePatterns": [
+        "\\$crisp",
+        "CRISP_WEBSITE_ID"
+      ],
+      "domPatterns": [
+        "^crisp-client"
+      ]
+    },
+    {
+      "id": "zendesk",
+      "name": "Zendesk Web Widget / Messaging",
+      "scriptPatterns": [
+        "static\\.zdassets\\.com/ekr/snippet\\.js",
+        "v2\\.zopim\\.com",
+        "zopim"
+      ],
+      "iframePatterns": [
+        "zdassets\\.com",
+        "zopim"
+      ],
+      "inlinePatterns": [
+        "zE\\(",
+        "zESettings",
+        "\\$zopim"
+      ],
+      "domPatterns": [
+        "^zewidget",
+        "^webwidget"
+      ]
+    },
+    {
+      "id": "hubspot",
+      "name": "HubSpot Conversations",
+      "scriptPatterns": [
+        "js\\.usemessages\\.com",
+        "js\\.hubspot\\.com/conversations"
+      ],
+      "iframePatterns": [
+        "js\\.usemessages\\.com",
+        "hubspot\\.com/conversations"
+      ],
+      "inlinePatterns": [
+        "HubSpotConversations"
+      ],
+      "domPatterns": [
+        "^hubspot-messages-iframe-container"
+      ]
+    },
+    {
+      "id": "livechat",
+      "name": "LiveChat",
+      "scriptPatterns": [
+        "cdn\\.livechatinc\\.com",
+        "livechatinc\\.com/tracking"
+      ],
+      "iframePatterns": [
+        "livechatinc\\.com"
+      ],
+      "inlinePatterns": [
+        "__lc\\.license",
+        "__lc\\s*="
+      ],
+      "domPatterns": [
+        "^chat-widget-container$"
+      ]
+    },
+    {
+      "id": "tawk",
+      "name": "Tawk.to",
+      "scriptPatterns": [
+        "embed\\.tawk\\.to"
+      ],
+      "iframePatterns": [
+        "tawk\\.to"
+      ],
+      "inlinePatterns": [
+        "Tawk_API",
+        "Tawk_LoadStart"
+      ],
+      "domPatterns": [
+        "^tawk-"
+      ]
+    },
+    {
+      "id": "freshchat",
+      "name": "Freshchat",
+      "scriptPatterns": [
+        "wchat\\.freshchat\\.com",
+        "snippets\\.freshchat\\.com"
+      ],
+      "iframePatterns": [
+        "freshchat\\.com"
+      ],
+      "inlinePatterns": [
+        "fcWidget"
+      ],
+      "domPatterns": [
+        "^fc_frame$",
+        "^freshchat"
+      ]
+    },
+    {
+      "id": "olark",
+      "name": "Olark",
+      "scriptPatterns": [
+        "static\\.olark\\.com",
+        "olark\\.com/jsclient"
+      ],
+      "iframePatterns": [
+        "olark\\.com"
+      ],
+      "inlinePatterns": [
+        "olark\\.identify",
+        "olark\\.configure"
+      ],
+      "domPatterns": [
+        "^habla_window_div",
+        "^olark-"
+      ]
+    },
+    {
+      "id": "gorgias",
+      "name": "Gorgias Chat",
+      "scriptPatterns": [
+        "config\\.gorgias\\.chat",
+        "gorgias\\.chat"
+      ],
+      "iframePatterns": [
+        "gorgias\\.chat"
+      ],
+      "inlinePatterns": [
+        "GorgiasChat"
+      ],
+      "domPatterns": [
+        "^gorgias-chat"
+      ]
+    },
+    {
+      "id": "botpress",
+      "name": "Botpress",
+      "scriptPatterns": [
+        "cdn\\.botpress\\.cloud",
+        "files\\.bpcontent\\.cloud",
+        "botpress"
+      ],
+      "iframePatterns": [
+        "botpress"
+      ],
+      "inlinePatterns": [
+        "botpressWebChat"
+      ],
+      "domPatterns": [
+        "^bpw-",
+        "^bp-widget"
+      ]
+    },
+    {
+      "id": "voiceflow",
+      "name": "Voiceflow",
+      "scriptPatterns": [
+        "cdn\\.voiceflow\\.com",
+        "voiceflow\\.com/widget"
+      ],
+      "iframePatterns": [
+        "voiceflow\\.com"
+      ],
+      "inlinePatterns": [
+        "voiceflow\\.chat\\.load"
+      ],
+      "domPatterns": [
+        "^vfrc-",
+        "^voiceflow-"
+      ]
+    },
+    {
+      "id": "landbot",
+      "name": "Landbot",
+      "scriptPatterns": [
+        "cdn\\.landbot\\.io",
+        "landbot\\.io"
+      ],
+      "iframePatterns": [
+        "landbot\\.io"
+      ],
+      "inlinePatterns": [
+        "new\\s+Landbot"
+      ],
+      "domPatterns": [
+        "^landbot"
+      ]
+    },
+    {
+      "id": "chatbase",
+      "name": "Chatbase",
+      "scriptPatterns": [
+        "chatbase\\.co/embed",
+        "www\\.chatbase\\.co"
+      ],
+      "iframePatterns": [
+        "chatbase\\.co"
+      ],
+      "inlinePatterns": [
+        "chatbase\\.co"
+      ],
+      "domPatterns": [
+        "^chatbase-"
+      ]
+    },
+    {
+      "id": "ada",
+      "name": "Ada",
+      "scriptPatterns": [
+        "static\\.ada\\.support",
+        "\\.ada\\.support/embed"
+      ],
+      "iframePatterns": [
+        "ada\\.support"
+      ],
+      "inlinePatterns": [
+        "adaEmbed"
+      ],
+      "domPatterns": [
+        "^ada-button-frame",
+        "^ada-entry"
+      ]
+    },
+    {
+      "id": "kommunicate",
+      "name": "Kommunicate",
+      "scriptPatterns": [
+        "widget\\.kommunicate\\.io",
+        "kommunicate\\.io"
+      ],
+      "iframePatterns": [
+        "kommunicate\\.io"
+      ],
+      "inlinePatterns": [
+        "kommunicateSettings"
+      ],
+      "domPatterns": [
+        "^kommunicate"
+      ]
+    },
+    {
+      "id": "smartsupp",
+      "name": "Smartsupp",
+      "scriptPatterns": [
+        "smartsuppchat\\.com"
+      ],
+      "iframePatterns": [
+        "smartsupp"
+      ],
+      "inlinePatterns": [
+        "_smartsupp"
+      ],
+      "domPatterns": [
+        "^smartsupp"
+      ]
+    },
+    {
+      "id": "userlike",
+      "name": "Userlike",
+      "scriptPatterns": [
+        "userlike-cdn-widgets",
+        "userlike\\.com"
+      ],
+      "iframePatterns": [
+        "userlike"
+      ],
+      "inlinePatterns": [
+        "userlikeConfig"
+      ],
+      "domPatterns": [
+        "^userlike"
+      ]
+    },
+    {
+      "id": "zoho-salesiq",
+      "name": "Zoho SalesIQ",
+      "scriptPatterns": [
+        "salesiq\\.zoho\\.[a-z.]+",
+        "salesiq\\.zohopublic\\."
+      ],
+      "iframePatterns": [
+        "salesiq\\.zoho"
+      ],
+      "inlinePatterns": [
+        "\\$zoho\\.salesiq",
+        "zsiqchat",
+        "zsiqwidget"
+      ],
+      "domPatterns": [
+        "^zsiq"
+      ]
+    },
+    {
+      "id": "liveperson",
+      "name": "LivePerson",
+      "scriptPatterns": [
+        "lpcdn\\.lpsnmedia\\.net",
+        "lpsnmedia\\.net"
+      ],
+      "iframePatterns": [
+        "liveperson\\.net"
+      ],
+      "inlinePatterns": [
+        "lpTag"
+      ],
+      "domPatterns": [
+        "^LPMcontainer",
+        "^lp_?chat"
+      ]
+    },
+    {
+      "id": "salesforce-embedded",
+      "name": "Salesforce Embedded Service / Messaging",
+      "scriptPatterns": [
+        "embeddedservice",
+        "salesforceliveagent\\.com",
+        "my\\.salesforce-scrt\\.com"
+      ],
+      "iframePatterns": [
+        "embeddedservice",
+        "salesforce-scrt\\.com"
+      ],
+      "inlinePatterns": [
+        "embedded_svc",
+        "embeddedservice_bootstrap"
+      ],
+      "domPatterns": [
+        "^embeddedservice",
+        "^embeddedmessaging"
+      ]
+    },
+    {
+      "id": "dialogflow-messenger",
+      "name": "Dialogflow Messenger",
+      "scriptPatterns": [
+        "dialogflow-console/fast/messenger",
+        "dialogflow-console/fast/df-messenger"
+      ],
+      "iframePatterns": [
+        "dialogflow"
+      ],
+      "inlinePatterns": [
+        "df-messenger"
+      ],
+      "domPatterns": [
+        "^df-messenger"
+      ]
+    },
+    {
+      "id": "watsonx-assistant",
+      "name": "IBM watsonx Assistant",
+      "scriptPatterns": [
+        "web-chat\\.global\\.assistant\\.watson\\.appdomain\\.cloud",
+        "assistant\\.watson\\."
+      ],
+      "iframePatterns": [
+        "assistant\\.watson\\."
+      ],
+      "inlinePatterns": [
+        "watsonAssistantChatOptions",
+        "watsonx?Assistant"
+      ],
+      "domPatterns": [
+        "^WACContainer",
+        "^watsonx?-"
+      ]
+    },
+    {
+      "id": "microsoft-webchat",
+      "name": "Microsoft Copilot Studio / Bot Framework Web Chat",
+      "scriptPatterns": [
+        "botframework-webchat",
+        "cdn\\.botframework\\.com",
+        "powerva\\.microsoft\\.com",
+        "copilotstudio\\.microsoft\\.com"
+      ],
+      "iframePatterns": [
+        "directline\\.botframework\\.com",
+        "webchat\\.botframework\\.com",
+        "powerva\\.microsoft\\.com",
+        "copilotstudio\\.microsoft\\.com"
+      ],
+      "inlinePatterns": [
+        "WebChat\\.renderWebChat",
+        "BotFramework\\.WebChat"
+      ],
+      "domPatterns": [
+        "^webchat__"
+      ]
+    },
+    {
+      "id": "respond-io",
+      "name": "Respond.io",
+      "scriptPatterns": [
+        "cdn\\.respond\\.io"
+      ],
+      "iframePatterns": [
+        "respond\\.io"
+      ],
+      "inlinePatterns": [
+        "respondio"
+      ],
+      "domPatterns": [
+        "^respondio"
+      ]
+    },
+    {
+      "id": "jivochat",
+      "name": "JivoChat",
+      "scriptPatterns": [
+        "code\\.jivosite\\.com",
+        "jivosite\\.com"
+      ],
+      "iframePatterns": [
+        "jivosite\\.com"
+      ],
+      "inlinePatterns": [
+        "jivo_api",
+        "jivo_config"
+      ],
+      "domPatterns": [
+        "^jivo"
+      ]
+    },
+    {
+      "id": "chatbot-com",
+      "name": "ChatBot.com",
+      "scriptPatterns": [
+        "chatbot\\.com/widget",
+        "cdn\\.chatbot\\.com"
+      ],
+      "iframePatterns": [
+        "chatbot\\.com"
+      ],
+      "inlinePatterns": [
+        "chatbot\\.com"
+      ],
+      "domPatterns": [
+        "^chatbot-com"
+      ]
+    },
+    {
+      "id": "botsonic",
+      "name": "Botsonic",
+      "scriptPatterns": [
+        "widget\\.botsonic\\.com",
+        "botsonic"
+      ],
+      "iframePatterns": [
+        "botsonic"
+      ],
+      "inlinePatterns": [
+        "Botsonic\\("
+      ],
+      "domPatterns": [
+        "^botsonic"
+      ]
+    },
+    {
+      "id": "quriobot",
+      "name": "Quriobot",
+      "scriptPatterns": [
+        "quriobot\\.com"
+      ],
+      "iframePatterns": [
+        "quriobot\\.com"
+      ],
+      "inlinePatterns": [
+        "quriobot"
+      ],
+      "domPatterns": [
+        "^quriobot"
+      ]
+    },
+    {
+      "id": "certainly",
+      "name": "Certainly",
+      "scriptPatterns": [
+        "certainly\\.io"
+      ],
+      "iframePatterns": [
+        "certainly\\.io"
+      ],
+      "inlinePatterns": [
+        "certainly\\.io"
+      ],
+      "domPatterns": [
+        "^certainly-"
+      ]
+    },
+    {
+      "id": "tars",
+      "name": "Tars",
+      "scriptPatterns": [
+        "hellotars\\.com"
+      ],
+      "iframePatterns": [
+        "hellotars\\.com"
+      ],
+      "inlinePatterns": [
+        "hellotars"
+      ],
+      "domPatterns": [
+        "^tars-chat"
+      ]
+    },
+    {
+      "id": "pandorabots",
+      "name": "Pandorabots",
+      "scriptPatterns": [
+        "pandorabots\\.com"
+      ],
+      "iframePatterns": [
+        "pandorabots\\.com"
+      ],
+      "inlinePatterns": [
+        "pandorabots"
+      ],
+      "domPatterns": []
+    },
+    {
+      "id": "sendbird",
+      "name": "Sendbird",
+      "scriptPatterns": [
+        "sendbird\\.com",
+        "sendbird-widget",
+        "sbwidget"
+      ],
+      "iframePatterns": [
+        "sendbird\\.com"
+      ],
+      "inlinePatterns": [
+        "SendBirdWidget",
+        "sbWidget"
+      ],
+      "domPatterns": [
+        "^sb-widget",
+        "^sendbird"
+      ]
+    },
+    {
+      "id": "smooch",
+      "name": "Smooch / Sunshine Conversations",
+      "scriptPatterns": [
+        "cdn\\.smooch\\.io",
+        "smooch\\.io",
+        "sunshine-conversations-web"
+      ],
+      "iframePatterns": [
+        "smooch\\.io"
+      ],
+      "inlinePatterns": [
+        "Smooch\\.init"
+      ],
+      "domPatterns": [
+        "^sk-container",
+        "^smooch"
+      ]
+    },
+    {
+      "id": "front-chat",
+      "name": "Front Chat",
+      "scriptPatterns": [
+        "chat-assets\\.frontapp\\.com"
+      ],
+      "iframePatterns": [
+        "chat-assets\\.frontapp\\.com"
+      ],
+      "inlinePatterns": [
+        "FrontChat\\("
+      ],
+      "domPatterns": [
+        "^front-chat"
+      ]
+    },
+    {
+      "id": "helpscout-beacon",
+      "name": "Help Scout Beacon",
+      "scriptPatterns": [
+        "beacon-v2\\.helpscout\\.net",
+        "beaconstatic\\.helpscout\\.net"
+      ],
+      "iframePatterns": [
+        "helpscout\\.net"
+      ],
+      "inlinePatterns": [
+        "Beacon\\(\\s*['\"]init['\"]"
+      ],
+      "domPatterns": [
+        "^beacon-container",
+        "^BeaconContainer"
+      ]
+    },
+    {
+      "id": "chatwoot",
+      "name": "Chatwoot",
+      "scriptPatterns": [
+        "chatwoot"
+      ],
+      "iframePatterns": [
+        "chatwoot"
+      ],
+      "inlinePatterns": [
+        "chatwootSettings",
+        "chatwootSDK"
+      ],
+      "domPatterns": [
+        "^woot-widget",
+        "^woot--bubble"
+      ]
+    },
+    {
+      "id": "rasa-webchat",
+      "name": "Rasa-based web chat",
+      "scriptPatterns": [
+        "rasa[-_]?webchat",
+        "rasahq"
+      ],
+      "iframePatterns": [
+        "rasa[-_]?webchat"
+      ],
+      "inlinePatterns": [
+        "rasa[-_]?webchat"
+      ],
+      "domPatterns": [
+        "^rasa-?webchat"
+      ]
+    },
+    {
+      "id": "facebook-customer-chat",
+      "name": "Facebook / Messenger customer chat plugin",
+      "scriptPatterns": [
+        "connect\\.facebook\\.net/[^/]+/customerchat\\.js"
+      ],
+      "iframePatterns": [
+        "facebook\\.com/customer_chat"
+      ],
+      "inlinePatterns": [
+        "fb-customerchat"
+      ],
+      "domPatterns": [
+        "^fb-customerchat"
+      ]
+    },
+    {
+      "id": "liveagent",
+      "name": "LiveAgent",
+      "scriptPatterns": [
+        "\\.ladesk\\.com",
+        "liveagent\\.com"
+      ],
+      "iframePatterns": [
+        "ladesk\\.com"
+      ],
+      "inlinePatterns": [
+        "LiveAgent\\.createButton"
+      ],
+      "domPatterns": [
+        "^liveagent"
+      ]
+    },
+    {
+      "id": "purechat",
+      "name": "Pure Chat",
+      "scriptPatterns": [
+        "app\\.purechat\\.com"
+      ],
+      "iframePatterns": [
+        "purechat\\.com"
+      ],
+      "inlinePatterns": [
+        "PureChatWidget",
+        "purechatApi"
+      ],
+      "domPatterns": [
+        "^purechat"
+      ]
+    },
+    {
+      "id": "social-intents",
+      "name": "Social Intents",
+      "scriptPatterns": [
+        "widget\\.socialintents\\.com"
+      ],
+      "iframePatterns": [
+        "socialintents\\.com"
+      ],
+      "inlinePatterns": [
+        "socialintents"
+      ],
+      "domPatterns": [
+        "^socialintents"
+      ]
+    },
+    {
+      "id": "genesys-messenger",
+      "name": "Genesys Web Messaging",
+      "scriptPatterns": [
+        "apps\\.[a-z0-9.-]*mypurecloud\\.[a-z.]+",
+        "genesys-widgets",
+        "apps\\.[a-z0-9.-]*pure\\.cloud"
+      ],
+      "iframePatterns": [
+        "mypurecloud\\."
+      ],
+      "inlinePatterns": [
+        "_genesys",
+        "Genesys\\(\\s*['\"]subscribe"
+      ],
+      "domPatterns": [
+        "^genesys-"
+      ]
+    },
+    {
+      "id": "brevo-conversations",
+      "name": "Brevo Conversations",
+      "scriptPatterns": [
+        "conversations-widget\\.brevo\\.com",
+        "conversations-widget\\.sendinblue\\.com"
+      ],
+      "iframePatterns": [
+        "conversations-widget\\.brevo\\.com"
+      ],
+      "inlinePatterns": [
+        "BrevoConversations"
+      ],
+      "domPatterns": [
+        "^brevo-conversations"
+      ]
+    },
+    {
+      "id": "yellow-ai",
+      "name": "Yellow.ai",
+      "scriptPatterns": [
+        "cdn\\.yellowmessenger\\.com",
+        "yellow\\.ai"
+      ],
+      "iframePatterns": [
+        "yellowmessenger\\.com"
+      ],
+      "inlinePatterns": [
+        "ymConfig",
+        "YellowMessengerPlugin"
+      ],
+      "domPatterns": [
+        "^ymDivBar",
+        "^yellowMessenger"
+      ]
+    }
+  ]
+}

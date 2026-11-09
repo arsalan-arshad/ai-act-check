@@ -1,0 +1,27 @@
+{
+  "name": "ai-act-check",
+  "version": "0.1.0",
+  "description": "Open-source scanner: checks public websites for EU AI Act transparency basics (chat widget disclosure, AI-content marking). Technical check, not legal advice.",
+  "license": "MIT",
+  "author": "Arsalan Arshad",
+  "type": "module",
+  "bin": { "ai-act-check": "dist/cli.js" },
+  "files": ["dist", "README.md", "LICENSE"],
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "build": "tsc -p tsconfig.json && node scripts/postbuild.mjs",
+    "typecheck": "tsc -p tsconfig.test.json --noEmit",
+    "test": "vitest run",
+    "test:unit": "vitest run test/unit",
+    "test:e2e": "vitest run test/e2e",
+    "start": "node dist/cli.js"
+  },
+  "dependencies": {
+    "playwright": "1.63.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0"
+  }
+}
