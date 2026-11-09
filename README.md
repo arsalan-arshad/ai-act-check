@@ -1,6 +1,14 @@
 # ai-act-check — a technical scanner for AI transparency basics on public websites
 
+<p align="center">
+  <img src="assets/banner.png" alt="ai-act-check banner" width="100%" />
+</p>
+
 > **Open source (MIT).** A technical check of public web pages. **Not legal advice**, not a certification, not a compliance assessment.
+
+[![CI](https://github.com/arsalan-arshad/ai-act-check/actions/workflows/ci.yml/badge.svg)](https://github.com/arsalan-arshad/ai-act-check/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+![Node](https://img.shields.io/badge/node-%3E%3D20-brightgreen)
 
 ---
 
